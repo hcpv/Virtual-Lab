@@ -19,7 +19,7 @@
 <p>
 {% if result != None %}
 {%load static%}
-<img id='result' src="{% get_static_prefix %}{{ result }}" >
+<img id='result' src="{% static 'Result.png' %}" >
 {% endif %}
 </p>
 

@@ -7,7 +7,7 @@ from Bode_Plot import views
 
 urlpatterns = [
     path('', views.objective,name='objective2'),
-    path('ssimulation/',views.index,name='simulation2'),
+    path('simulation/',views.index,name='simulation2'),
     path('theory/', views.theory,name='theory2'),
 ]
 urlpatterns+=staticfiles_urlpatterns()

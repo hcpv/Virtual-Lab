@@ -14,6 +14,11 @@ def compute(num,den):
     tf=control.tf(num,den)
     t1,y1 = signal.step(sys)
     t2,y2=signal.impulse(sys)
+    s=str(tf)
+    s=s.split('\n')
+    s1='('+s[1].strip()+')'
+    s2='('+s[3].strip()+')'
+    plt.title('Time Response of H(s)='+s1+'/'+s2)
     plt.plot(t1,y1,'b--',linewidth=3,label='Step Response')
     plt.plot(t2,y2,'r--',linewidth=3,label='Impulse Response')
     plt.xlabel('Time')
