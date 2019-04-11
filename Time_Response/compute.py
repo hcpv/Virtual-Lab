@@ -20,7 +20,7 @@ def compute(num,den):
     s2='('+s[3].strip()+')'
     plt.title('Time Response of H(s)='+s1+'/'+s2)
     plt.plot(t1,y1,'b--',linewidth=3,label='Step Response')
-    plt.plot(t2,y2,'r--',linewidth=3,label='Impulse Response')
+    plt.plot(t2,y2,'r',linewidth=3,label='Impulse Response')
     plt.xlabel('Time')
     plt.ylabel('Response (y)')
     plt.legend(loc='best')

@@ -12,7 +12,7 @@ def compute(num,den):
     tf=control.tf(num,den)
     image=Image.open('background.png')
     draw=ImageDraw.Draw(image)
-    font = ImageFont.truetype('Roboto-Bold.ttf', size=16)
+    font = ImageFont.truetype('Roboto-Regular.ttf', size=24)
     color='rgb(0,0,0)'
     (x,y)=(23,0)
     roots=np.roots(den)
@@ -25,10 +25,10 @@ def compute(num,den):
     for i in roots:
         r.append(str(i))
     draw.text((x,y),s,font=font,fill=color)
-    y=y+17
+    y=y+28
     for i in r:
         draw.text((x,y),i,font=font,fill=color)
-        y=y+17
+        y=y+28
     if not os.path.isdir('static'):
         os.mkdir('static')
     else:
