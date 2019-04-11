@@ -2,25 +2,52 @@
  {% extends "Roots/layouts/base2.html" %}
  {% block content %}
 <h3>Simulation:</h3>
-<form method=post action="">{% csrf_token %}
-<table>
+<style>
+	#ip{
+		
+		width:25%;
+	}
+	form{
+		padding: 17px;
+	}
+	button{
+		background-color: #0C7B9D; 
+		color: white;
+		padding-left: 17px;
+		padding-right:17px;
+	}
+	#button{
+		padding-top: 17px;
+	}
+	#id2
+	{
+		width:75%; 
+	}
+	#plot{
+		padding-left: 100px;
+		padding-top: 60px;
+	}
+</style>
+<div class="row">
+<div  id="ip" class="column"><br>
+<form method=post style="background-color:#E6E6FA" action="">{% csrf_token %}
+<table >
   {% for field in form %}
-    <tr>
-    <td>{{ field.name }}</td>
-    <td>{{ field }}</td>
-    <td>{{ field.label }}</td>
-    <td>{{ field.errors }}</td>
-    <td></td>
-    </tr>
+    <tr>{{field.label}}:<br></tr>
+    <tr>{{field}}<br></tr>
+
   {% endfor %}
 </table>
-<p id="in"><input type=submit value='Compute' name="Compute">
+<p id='button'><button type="submit">Compute</button>
 </form></p>
 <p>
+</div>
+<div id="ip2"class="column">
 {% if result != None %}
 {%load static%}
-<img id='result' src="{% static 'Result.png' %}" >
+<img id="plot" src="{% static 'Result.png' %}" width="1100">
 {% endif %}
 </p>
-
+</div>
+</div>
 {% endblock %}

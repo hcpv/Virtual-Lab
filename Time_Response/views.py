@@ -18,7 +18,7 @@ def index(request):
         form = InputForm(request.POST)
         if form.is_valid():
             form2 = form.save(commit=False)
-            result = compute(form2.num, form2.den,)
+            result = compute(form2.num, form2.den)
             
             result= result.replace('static\\', '')
             print(result)
