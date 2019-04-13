@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual-Labs for Control System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{%static 'pidcontrol/style.css'%}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body >
+    <header>
+      <div>
+      <div id="image" style="float: left;">
+      {%load staticfiles%}
+      <a href={% url 'home' %}><img src="{% static 'pidcontrol/iitr_logo.jpg'%}" width=100 height=100></a>
+      </div>
+      <h1>Virtual Labs for Control System</h1>
+      <h2>PID Control</h2>
+      </div>
+    </header>
+    <section>
+    <nav class="navbar navbar-expand-lg color-white">
+    <a class="navbar-brand" href="#"></a>
+    <div id="navbarNav">
+      <ul class="navbar-nav">
+       {%load static%}
+        <li >
+          <a class="nav-link " href={% url 'home' %}> <img src="{% static 'pidcontrol/home.png'%}" width=25 height=25></span></a>
+        </li>
+        <li class="nav-item">
+          <a id="obj" class="nav-link " href={% url 'objectivepid' %} >Home</a>
+        </li>
+        <li class="nav-item">
+          <a id="th" class="nav-link" href={% url 'theorypid' %}>Theory</a>
+        </li>
+        <li class="nav-item">
+          <a id="lg" class="nav-link" href={% url 'simulationpid' %}>Simulation</a>
+        </li>
+ 
+      </ul>
+    </div>
+    </nav>
+    </section>
+    <div id="content">
+
+    {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

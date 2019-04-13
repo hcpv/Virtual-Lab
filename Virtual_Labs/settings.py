@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'Roots',
     'Control_System',
     'NyquistPlot',
+    'pidcontrol',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
