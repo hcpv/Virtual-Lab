@@ -26,8 +26,8 @@ def compute(num,den):
     plt.semilogx(w,phase,'r',linewidth=3)
     plt.xlabel('Frequency(rad/sec)')
     plt.ylabel('Phase-dB')
-    plt.title('Phase Plot')  
-    plt.subplots_adjust(hspace=0.8) 
+    plt.title('Phase Plot')
+    plt.subplots_adjust(hspace=0.8)
     if not os.path.isdir('static'):
         os.mkdir('static')
     else:
@@ -40,5 +40,5 @@ def compute(num,den):
     plt.cla()
     plt.close()
     return plotfile
-    
+
 
