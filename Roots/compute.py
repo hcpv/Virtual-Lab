@@ -33,9 +33,9 @@ def compute(num,den):
         os.mkdir('static')
     else:
         # Remove old plot files
-        for filename in glob.glob(os.path.join('static', 'Result.png')):
+        for filename in glob.glob(os.path.join('static','Roots', 'Result.png')):
             os.remove(filename)
-    plotfile = os.path.join('static', 'Result'+ '.png')
+    plotfile = os.path.join('static','Roots', 'Result'+ '.png')
     image.save(plotfile)
     return plotfile
     

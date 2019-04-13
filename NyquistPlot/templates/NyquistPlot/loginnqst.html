@@ -1,7 +1,7 @@
 
- {% extends "Bode_Plot/layouts/base.html" %}
+ {% extends "layouts/base.html" %}
  {% block content %}
-<h3>Simulation:</h3>
+<h3>Enter coefficients of G(s)H(s):</h3>
 <style>
 	#ip{
 		
@@ -26,11 +26,10 @@
 	#plot{
 		padding-left: 200px;
 	}
-	#s{
-  color: white;
-  background-color: #0C7B9D;
-}
-
+	#lg{
+        color: white;
+        background-color: #0C7B9D;
+    }
 </style>
 <div class="row">
 <div  id="ip" class="column"><br>
@@ -47,9 +46,9 @@
 <p>
 </div>
 <div id="ip2"class="column">
-{% if result != None %}
+{% if nqst != None %}
 {%load static%}
-<img id="plot" src="{% static 'Bode_Plot/Plot.png' %}">
+<img id="plot" src="{% static 'NyquistPlot/Plot3.png' %}">
 {% endif %}
 </p>
 </div>
