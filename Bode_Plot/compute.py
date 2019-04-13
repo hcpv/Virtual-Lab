@@ -32,9 +32,9 @@ def compute(num,den):
         os.mkdir('static')
     else:
         # Remove old plot files
-        for filename in glob.glob(os.path.join('static', 'Plot.png')):
+        for filename in glob.glob(os.path.join('static','Bode_Plot', 'Plot.png')):
             os.remove(filename)
-    plotfile = os.path.join('static', 'Plot' + '.png')
+    plotfile = os.path.join('static','Bode_Plot', 'Plot' + '.png')
     plt.savefig(plotfile)
     plt.clf()
     plt.cla()
