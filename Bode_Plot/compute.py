@@ -26,19 +26,19 @@ def compute(num,den):
     plt.semilogx(w,phase,'r',linewidth=3)
     plt.xlabel('Frequency(rad/sec)')
     plt.ylabel('Phase-dB')
-    plt.title('Phase Plot')  
-    plt.subplots_adjust(hspace=0.8) 
+    plt.title('Phase Plot')
+    plt.subplots_adjust(hspace=0.8)
     if not os.path.isdir('static'):
         os.mkdir('static')
     else:
         # Remove old plot files
-        for filename in glob.glob(os.path.join('static', 'Plot.png')):
+        for filename in glob.glob(os.path.join('static','Bode_Plot','Plot.png')):
             os.remove(filename)
-    plotfile = os.path.join('static', 'Plot' + '.png')
+    plotfile = os.path.join('static','Bode_Plot','Plot' + '.png')
     plt.savefig(plotfile)
     plt.clf()
     plt.cla()
     plt.close()
     return plotfile
-    
+
 
