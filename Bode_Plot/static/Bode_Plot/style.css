@@ -20,6 +20,7 @@ header {
   background-color: #0C7B9D;
  
 }
+
 /* Create two columns/boxes that floats next to each other */
 nav {
   float: center;
@@ -36,7 +37,7 @@ a{
   font-size: 20px;
   padding-left: 80px;
   padding-top: 60px; 
-  background-color: #F4F4F4;
+
 }
 #in
 {

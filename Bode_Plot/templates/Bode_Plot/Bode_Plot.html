@@ -26,14 +26,19 @@
 	#plot{
 		padding-left: 200px;
 	}
+	#s{
+  color: white;
+  background-color: #0C7B9D;
+}
+
 </style>
 <div class="row">
 <div  id="ip" class="column"><br>
 <form method=post style="background-color:#E6E6FA" action="">{% csrf_token %}
 <table >
   {% for field in form %}
-    <tr>{{field.label}}:<br></tr>
-    <tr>{{field}}<br></tr>
+    <tr>{{field.label}}:<br><br></tr>
+    <tr>{{field}}<br><br></tr>
 
   {% endfor %}
 </table>
@@ -44,7 +49,7 @@
 <div id="ip2"class="column">
 {% if result != None %}
 {%load static%}
-<img id="plot" src="{% static 'Plot.png' %}">
+<img id="plot" src="{% static 'Bode_Plot/Plot.png' %}">
 {% endif %}
 </p>
 </div>

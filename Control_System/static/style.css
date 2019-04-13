@@ -12,7 +12,7 @@ header {
   
   background-color: #0C7B9D;
   padding: 10px;
-  text-align:left;
+  text-align:center;
   font-size: 35px;
   color: white;
 }
@@ -39,6 +39,7 @@ a{
   font-size: 20px;
   padding-left: 80px;
   padding-top: 60px; 
+
 }
 #in
 {

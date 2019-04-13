@@ -1,0 +1,56 @@
+
+ {% extends "layouts/base.html" %}
+ {% block content %}
+<h3>Enter coefficients of G(s)H(s):</h3>
+<style>
+	#ip{
+		
+		width:25%;
+	}
+	form{
+		padding: 17px;
+	}
+	button{
+		background-color: #0C7B9D; 
+		color: white;
+		padding-left: 17px;
+		padding-right:17px;
+	}
+	#button{
+		padding-top: 17px;
+	}
+	#id2
+	{
+		width:75%; 
+	}
+	#plot{
+		padding-left: 200px;
+	}
+	#lg{
+        color: white;
+        background-color: #0C7B9D;
+    }
+</style>
+<div class="row">
+<div  id="ip" class="column"><br>
+<form method=post style="background-color:#E6E6FA" action="">{% csrf_token %}
+<table >
+  {% for field in form %}
+    <tr>{{field.label}}:<br><br></tr>
+    <tr>{{field}}<br><br></tr>
+
+  {% endfor %}
+</table>
+<p id='button'><button type="submit">Compute</button>
+</form></p>
+<p>
+</div>
+<div id="ip2"class="column">
+{% if nqst != None %}
+{%load static%}
+<img id="plot" src="{% static 'NyquistPlot/Plot3.png' %}">
+{% endif %}
+</p>
+</div>
+</div>
+{% endblock %}

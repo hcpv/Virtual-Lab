@@ -7,14 +7,14 @@
     <title>Virtual-Labs for Control System</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'Time_Response/style.css'%}">
 </head>
 <body >
     <header>
       <div>
       <div id="image" style="float: left;">
       {%load static%}
-      <img src="{% static 'iitr_logo.jpg'%}" width=100 height=100>
+      <img src="{% static 'Time_Response/iitr_logo.jpg'%}" width=100 height=100>
       </div>
       <h1>Virtual Labs for Control System</h1>
       <h1>Time Response</h1>
@@ -27,16 +27,16 @@
       <ul class="navbar-nav">
        {%load static%}
         <li >
-          <a class="nav-link " href={% url 'home' %}> <img src="{% static 'home.png'%}" width=25 height=25></span></a>
+          <a class="nav-link " href={% url 'home' %}> <img src="{% static 'Time_Response/home.png'%}" width=25 height=25></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href={% url 'objective' %} >Home</a>
+          <a id="h" class="nav-link " href={% url 'objective' %} >Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href={% url 'theory' %}>Theory</a>
+          <a id="t" class="nav-link" href={% url 'theory' %}>Theory</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href={% url 'simulation' %}>Simulation</a>
+          <a id="s" class="nav-link" href={% url 'simulation' %}>Simulation</a>
         </li>
  
       </ul>
