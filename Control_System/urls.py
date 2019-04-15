@@ -10,8 +10,10 @@ urlpatterns = [
     path('', views.home,name='home'),
     path('Bode_Plot/', include('Bode_Plot.urls')),
     path('Time_Response/', include('Time_Response.urls')),
+    path('RootLocus/', include('RootLocus.urls')),
     path('Roots/', include('Roots.urls')),
     path('NyquistPlot/', include('NyquistPlot.urls')),
     path('PIDControl/', include('pidcontrol.urls')),
+    path('StateSpace/', include('StateSpace.urls')),
 ]
 urlpatterns+=staticfiles_urlpatterns()

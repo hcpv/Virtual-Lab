@@ -1,0 +1,62 @@
+ {% extends "layouts2/base.html" %}
+ {% block content %}
+ <style>
+	#ip{
+
+		width:25%;
+	}
+	form{
+		padding: 17px;
+	}
+	button{
+		background-color: #0C7B9D;
+		color: white;
+		padding-left: 17px;
+		padding-right:17px;
+	}
+	#button{
+		padding-top: 17px;
+	}
+	#id2
+	{
+		width:75%;
+	}
+	#plot{
+		padding-left: 100px;
+		padding-top: 60px;
+	}
+	#lg{
+		color: white;
+        background-color: #0C7B9D;
+	}
+	#tbl{
+		padding-left: 150px;
+		padding-top: 50px;
+	}
+</style>
+<div class="row">
+<div  id="ip" class="column"><br>
+<form method=post style="background-color:#E6E6FA" action="">{% csrf_token %}
+<table >
+  {% for field in form %}
+    <tr>{{field.label}}:<br><br></tr>
+    <tr>{{field}}<br><br></tr>
+
+  {% endfor %}
+</table>
+<p id='button'><button type="submit">Compute</button>
+</form></p>
+<p>
+</div>
+     <div id="tbl" class="column">
+    		<div class="row"><div class="column">A  =   &nbsp</div><div class="column">{{A | safe}}</div></div><br>
+    		<div class="row"><div class="column">B  =   &nbsp</div><div class="column">{{B | safe}}</div></div><br>
+    		<div class="row"><div class="column">C  =   &nbsp</div><div class="column">{{C | safe}}</div></div><br>
+    		<div class="row"><div class="column">D  =   &nbsp</div><div class="column">{{D | safe}}</div></div><br>
+    </div>
+</div>
+    {% endblock %}
+    
+
+
+   
