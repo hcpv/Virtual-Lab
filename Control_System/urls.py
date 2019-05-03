@@ -16,5 +16,6 @@ urlpatterns = [
     path('PIDControl/', include('pidcontrol.urls')),
     path('StateSpace/', include('StateSpace.urls')),
     path('Feedback/', include('Feedback.urls')),
+    path('SeriesParallel/', include('SeriesParallel.urls')),
 ]
 urlpatterns+=staticfiles_urlpatterns()

@@ -4,24 +4,21 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  
+
 }
 
 /* Style the header */
 header {
-  
+
   background-color: #0C7B9D;
   padding: 10px;
   text-align:center;
   font-size: 35px;
   color: white;
 }
-#lside{
-  background-color: #0C7B9D;
-}
 #image{
   background-color: #0C7B9D;
- 
+
 }
 /* Create two columns/boxes that floats next to each other */
 nav {
@@ -35,23 +32,18 @@ a{
   color: white;
 }
 #content {
- 
+
   font-size: 20px;
   padding-left: 80px;
-  padding-top: 60px; 
-
+  padding-top: 60px;
+   background-color:#F4F4F4;
+  height:1200px;
 }
+
 #in
 {
   padding-top: 20px;
   padding-left: 40px;
-}
-#Brief{
-  border: 1px solid black;
-  padding: 10px;
-  width: 200px;
-  height: 200px;
-  text-align: justify;
 }
 /* Style the list inside the menu */
 nav ul {

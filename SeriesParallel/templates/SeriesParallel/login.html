@@ -1,0 +1,68 @@
+ {% extends "layouts4/base.html" %}
+ {% block content %}
+ <style>
+form {
+  
+  padding-left: 17px;
+}
+#lg{
+  color: white;
+  background-color: #0C7B9D;
+}
+button {background-color: #0C7B9D; color: white;padding-left: 30px;padding-right: 30px;} 
+#ip{
+	width: 25%;
+}
+	form{
+		padding: 17px;
+	}
+	button{
+		background-color: #0C7B9D; 
+		color: white;
+		padding-left: 17px;
+		padding-right:17px;
+	}
+	#button{
+		padding-top: 17px;
+	}
+	#id2
+	{
+		width:75%; 
+	}
+	#plot,#plot1{
+		padding-left:40px;
+		padding-top: 50px;
+	}
+	#lg{
+	color: white;
+        background-color: #0C7B9D;
+	}
+</style>
+<div class="row">
+	<div id="ip" class="column">
+	<form method=post style="background-color:#E6E6FA" action="">{% csrf_token %}
+<table >
+  {% for field in form %}
+    <tr>{{field.label}}:<br><br></tr>
+    <tr>{{field}}<br><br></tr>
+
+  {% endfor %}
+</table>
+<p id='button'><button type="submit">Compute</button>
+</form></p>
+    </div>
+<div class="column">
+{% if sp1 != None %}
+{%load static%}
+<img id="plot" src="{%static 'SeriesParallel/sp1.png'%}" width=500 height="500">
+{% endif %}
+</div>
+<div class="column">
+{% if sp2 != None %}
+{%load static%}
+<img id="plot1" src="{%static 'SeriesParallel/sp2.png'%}" width=500 height="500">
+{% endif %}
+</div>
+    </div>
+    
+    {% endblock %}
