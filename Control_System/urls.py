@@ -15,5 +15,6 @@ urlpatterns = [
     path('NyquistPlot/', include('NyquistPlot.urls')),
     path('PIDControl/', include('pidcontrol.urls')),
     path('StateSpace/', include('StateSpace.urls')),
+    path('Feedback/', include('Feedback.urls')),
 ]
 urlpatterns+=staticfiles_urlpatterns()

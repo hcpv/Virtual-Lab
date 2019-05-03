@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'pidcontrol',
     'RootLocus',
     'StateSpace',
+    'Feedback',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
