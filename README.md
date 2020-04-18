@@ -15,3 +15,16 @@ Install the project dependencies<br/>
 pipenv install
 pipenv shell
 ```
+```
+py -m pip install -r requirements.txt
+```
+Make migrations
+```
+py manage.py makemigrations
+py manage.py migrate
+```
+Run Server
+```
+py manage.py runserver
+```
+Go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
